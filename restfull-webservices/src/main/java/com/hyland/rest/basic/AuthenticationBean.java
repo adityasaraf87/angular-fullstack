@@ -1,4 +1,4 @@
-package com.hyland.rest.webservice.restfullwebservices;
+package com.hyland.rest.basic;
 
 public class AuthenticationBean {
 

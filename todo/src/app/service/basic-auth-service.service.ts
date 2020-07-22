@@ -31,6 +31,26 @@ export class BasicAuthServiceService {
         )
       );
   }
+  executeJWTAuthenticationService(username, password) {
+
+    
+    return this.http.post<any>(
+      `${API_URI}/authenticate`
+      ,{
+        username,
+        password
+      }
+    )
+      .pipe(
+        map(
+          data => {
+            sessionStorage.setItem('authenticatedUser', username);
+            sessionStorage.setItem('token', `Bearer ${data.token}`);
+            return data;
+          }
+        )
+      );
+  }
   isUserLoggedIn() {
     let user = sessionStorage.getItem('authenticatedUser');
     return !(user === null)

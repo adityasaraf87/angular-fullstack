@@ -1,4 +1,4 @@
-package com.hyland.rest.webservice.restfullwebservices;
+package com.hyland.rest.basic;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
