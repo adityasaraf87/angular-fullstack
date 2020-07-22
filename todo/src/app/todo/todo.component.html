@@ -1,6 +1,5 @@
 <h1>ToDo</h1>
-<div class="container">
-    <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter Valid Values</div>
+<div class="container">    
     <div class="alert alert-warning" *ngIf="todoForm.dirty && targetDate.invalid">Enter Valid Target Date</div>
     <div class="alert alert-warning" *ngIf="todoForm.dirty && description.invalid">Enter Description</div>
         <form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm">
