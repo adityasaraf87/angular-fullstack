@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ToDoService {
 
 	private static List<ToDo> todos = new ArrayList<>();
-	private static int idCounter = 0;
+	private static Long idCounter = 0L;
 	
 	static {
 		todos.add(new ToDo(++idCounter,"aditya", "Learn To Dance", new Date(), false));
