@@ -210,8 +210,11 @@ h2{
 }
 
 .col-4-app {
-    width: 25%;
+    width: 33.33%;
     float: left;
+    
+}
+.col-4-pad{
     padding: 0px 45px;
 }
 
@@ -361,4 +364,32 @@ footer p {
     content: "";
     border: 1px solid #555555;
     margin-left: 35px;
+}
+
+/* MEDIA QUERIES*/
+@media only screen and (max-width:920px){
+    .imgs{
+        display: none;
+    }
+    .cta-info{
+        width: 80%;
+        text-align: center;
+    }
+    .p-features{
+        padding: 0px 30px;
+    }
+    .col-4-app{
+        width: 100%;
+        float: none;
+        margin-bottom: 50px;
+    }
+    .col-4-footer {
+        width: 90%;
+        
+        float: none;
+     
+        color: white;
+        padding: 30px;
+    }
+
 }
