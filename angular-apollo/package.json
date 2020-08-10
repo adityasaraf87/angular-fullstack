@@ -27,6 +27,12 @@
     "graphql": "^15.0.0"
   },
   "devDependencies": {
+    "@graphql-cli/codegen": "^1.17.7",
+    "@graphql-codegen/cli": "1.17.7",
+    "@graphql-codegen/schema-ast": "^1.17.7",
+    "@graphql-codegen/typescript": "1.17.7",
+    "@graphql-codegen/typescript-apollo-angular": "1.17.7",
+    "@graphql-codegen/typescript-operations": "1.17.7",
     "@angular-devkit/build-angular": "~0.901.11",
     "@angular/cli": "~9.1.11",
     "@angular/compiler-cli": "~9.1.12",
@@ -34,6 +40,7 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^5.1.2",
+    "graphql-cli": "^4.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",

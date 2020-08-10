@@ -1,3 +1,7 @@
+       
+#To run
+npx graphql codegen
+
 # AngularApollo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.11.
