@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { AllUsersGQL } from 'src/generated/types.graphql-gen';
 
 @Component({
   selector: 'app-users',
@@ -12,20 +13,11 @@ export class UsersComponent implements OnInit {
   users : any[];
   loading = true;
   error: any;
-  constructor(private apollo:Apollo) { }
+  constructor(private apollo:AllUsersGQL) { }
 
   ngOnInit(): void {
     this.apollo
-    .watchQuery({
-      query: gql`{
-        
-          getUsers{
-           name,
-           email
-         }
-         
-      }`,
-    })
+    .watch()
     .valueChanges.subscribe(({data,loading,error}) =>{
       this.users = data.getUsers;
       this.loading = loading;

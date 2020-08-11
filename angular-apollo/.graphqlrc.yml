@@ -1,0 +1,14 @@
+schema: https://oq764v7x1y.sse.codesandbox.io/
+documents: src/**/*.graphql
+extensions:
+  codegen:
+    generates:
+      ./schema.graphql:
+        plugins:
+          - schema-ast      
+      src/generated/types.graphql-gen.ts:
+        plugins:
+          - typescript
+          - typescript-operations
+          - typescript-apollo-angular
+    overwrite: true

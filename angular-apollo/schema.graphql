@@ -1,0 +1,137 @@
+""""""
+type Query {
+  """"""
+  channels: [Channel!]!
+
+  """"""
+  channel(id: ID!): Channel
+
+  """"""
+  getUsers: [User]
+}
+
+""""""
+type Channel {
+  """"""
+  id: ID!
+
+  """"""
+  messages: [Message!]!
+
+  """"""
+  name: String!
+}
+
+""""""
+type Message {
+  """"""
+  id: ID!
+
+  """"""
+  text: String!
+}
+
+""""""
+type User {
+  """"""
+  id: ID!
+
+  """"""
+  name: String
+
+  """"""
+  username: String
+
+  """"""
+  email: String
+
+  """"""
+  phone: String
+
+  """"""
+  website: String
+
+  """"""
+  company: Company
+
+  """"""
+  address: Address
+}
+
+""""""
+type Company {
+  """"""
+  name: String
+
+  """"""
+  catchPhrase: String
+
+  """"""
+  bs: String
+}
+
+""""""
+type Address {
+  """"""
+  street: String
+
+  """"""
+  suite: String
+
+  """"""
+  city: String
+
+  """"""
+  zipcode: String
+
+  """"""
+  geo: Location
+}
+
+""""""
+type Location {
+  """"""
+  lat: Float
+
+  """"""
+  lng: Float
+}
+
+""""""
+type Mutation {
+  """"""
+  addChannel(name: String!): Channel
+
+  """"""
+  addMessage(message: MessageInput!): Message
+}
+
+""""""
+input MessageInput {
+  """"""
+  channelId: ID!
+
+  """"""
+  text: String!
+}
+
+""""""
+type Subscription {
+  """"""
+  messageAdded(channelId: ID!): Message
+
+  """"""
+  channelAdded: Channel
+}
+
+""""""
+enum CacheControlScope {
+  """"""
+  PUBLIC
+
+  """"""
+  PRIVATE
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
